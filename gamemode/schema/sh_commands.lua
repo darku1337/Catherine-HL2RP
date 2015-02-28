@@ -3,19 +3,22 @@ catherine.command.Register( {
 	command = "radio",
 	syntax = "[Text]",
 	runFunc = function( pl, args )
-		if ( pl:HasItem( "portable_radio" ) ) then
-
-			if ( pl:GetInvItemData( "portable_radio", "toggle" ) ) then
-				if ( pl:GetInvItemData( "portable_radio", "freq" ) != "" ) then
-				
+		if ( args[ 1 ] ) then
+			if ( pl:HasItem( "portable_radio" ) ) then
+				if ( pl:GetInvItemData( "portable_radio", "toggle" ) ) then
+					if ( pl:GetInvItemData( "portable_radio", "freq" ) != "" ) then
+						Schema:SayRadio( pl, table.concat( args, " " ) )
+					else
+						catherine.util.Notify( pl, "You are not set radio freq!" )
+					end
 				else
-					catherine.util.Notify( pl, "You are not set radio freq!" )
+					catherine.util.Notify( pl, "Please turn on the radio!" )
 				end
 			else
-				catherine.util.Notify( pl, "Please turn on the radio!" )
+				catherine.util.Notify( pl, "You don't have Portable radio!" )
 			end
 		else
-			catherine.util.Notify( pl, "You don't have Portable radio!" )
+			catherine.util.Notify( pl, "Please input message!" )
 		end
 	end
 } )

@@ -10,3 +10,14 @@ catherine.util.Include( "sh_config.lua" )
 catherine.util.Include( "sh_commands.lua" )
 catherine.util.Include( "sv_schema.lua" )
 catherine.util.Include( "cl_schema.lua" )
+
+catherine.chat.RegisterClass( {
+	class = "radio",
+	doChat = function( pl, text )
+		chat.AddText( Color( 0, 255, 100 ), pl:Name( ) .. " 님의 말 : " .. text )
+	end,
+	global = true,
+	canRun = function( pl )
+		return pl:Alive( )
+	end
+} )
