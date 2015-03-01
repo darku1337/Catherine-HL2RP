@@ -22,3 +22,15 @@ catherine.command.Register( {
 		end
 	end
 } )
+
+catherine.command.Register( {
+	command = "dispatch",
+	syntax = "[Text]",
+	runFunc = function( pl, args )
+		if ( args[ 1 ] ) then
+			Schema:SayDispatch( pl, args[ 1 ] )
+		else
+			catherine.util.Notify( pl, "Please input message!" )
+		end
+	end
+} )

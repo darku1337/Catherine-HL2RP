@@ -21,3 +21,14 @@ catherine.chat.RegisterClass( {
 		return pl:Alive( )
 	end
 } )
+
+catherine.chat.RegisterClass( {
+	class = "dispatch",
+	doChat = function( pl, text )
+		chat.AddText( Color( 255, 150, 150 ), "Combine Dispatch - " .. text )
+	end,
+	global = true,
+	canRun = function( pl )
+		return pl:Alive( )
+	end
+} )

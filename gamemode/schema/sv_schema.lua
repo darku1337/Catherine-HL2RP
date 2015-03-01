@@ -21,10 +21,15 @@ function Schema:SayRadio( pl, text )
 	catherine.chat.RunByClass( pl, "radio", text, chanels[ playerfreq ] )
 end
 
+function Schema:SayDispatch( pl, text )
+
+	catherine.chat.RunByClass( pl, "dispatch", text )
+end
+
 function Schema:ChatAdjust( pl, adjustInfo )
 	if ( adjustInfo.class == "ic" or adjustInfo.class == "radio" or adjustInfo.class == "yell" or adjustInfo.class == "whisper" ) then
 		local tab = { sounds = { }, text = "" }
-		local ex = string.Explode( " ", adjustInfo.text )
+		local ex = string.Explode( ", ", adjustInfo.text )
 		local vol = true
 
 		if ( adjustInfo.class == "ic" ) then
@@ -49,6 +54,17 @@ function Schema:ChatAdjust( pl, adjustInfo )
 			end
 		end
 
+		adjustInfo.voice = tab.sounds
+		return adjustInfo
+	elseif ( adjustInfo.class == "dispatch" ) then
+		local tab = { sounds = { }, text = "" }
+		for k, v in pairs( Schema.voice.dispatchVoice ) do
+			if ( v.command:lower( ) == adjustInfo.text:lower( ) ) then
+				tab.sounds[ #tab.sounds + 1 ] = { dir = v.sound, len = SoundDuration( v.sound ), vol = true }
+				adjustInfo.text = v.output
+			end
+		end
+		
 		adjustInfo.voice = tab.sounds
 		return adjustInfo
 	end
