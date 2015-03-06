@@ -2,6 +2,8 @@
 
 --]]
 
+resource.AddFile( "resource/fonts/Le_Bossu.ttf" )
+
 function Schema:PlayerCantSpray( pl )
 	return !pl:HasItem( "spray" )
 end

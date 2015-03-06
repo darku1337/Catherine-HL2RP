@@ -1,10 +1,8 @@
-
 Schema.Name = "HL2RP"
-Schema.Desc = "The City 17 in the life."
-Schema.Author = "L7D, Fristet"
+Schema.Author = "L7D"
 Schema.FolderName = "catherine_hl2rp"
-Schema.Title = "Welcome to City 17."
-Schema.Desc = "This is safe, maybe ..."
+Schema.Title = "2016 year, City 18"
+Schema.Desc = "This is safe."
 
 catherine.util.Include( "sh_config.lua" )
 catherine.util.Include( "sh_commands.lua" )
@@ -14,7 +12,7 @@ catherine.util.Include( "cl_schema.lua" )
 catherine.chat.RegisterClass( {
 	class = "radio",
 	doChat = function( pl, text )
-		chat.AddText( Color( 0, 255, 100 ), pl:Name( ) .. " 님의 말 : " .. text )
+		chat.AddText( Color( 0, 255, 100 ), pl:Name( ) .. " radio says " .. text )
 	end,
 	global = true,
 	canRun = function( pl )
