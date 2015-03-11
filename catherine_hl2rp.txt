@@ -1,6 +1,0 @@
-"catherine_hl2rp"
-{
-	"base"		"catherine"
-	"title"			"Catherine - HL2RP"
-	"version"		"0"
-}

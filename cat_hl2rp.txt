@@ -1,0 +1,6 @@
+"cat_hl2rp"
+{
+	"base"		"catherine"
+	"title"		"Catherine - HL2RP"
+	"author"		"L7D"
+}
