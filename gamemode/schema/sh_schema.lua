@@ -1,6 +1,6 @@
 Schema.Name = "HL2RP"
 Schema.Author = "L7D"
-Schema.FolderName = "catherine_hl2rp"
+Schema.FolderName = "cat_hl2rp"
 Schema.Title = "2016 year, City 18"
 Schema.Desc = "This is safe."
 
