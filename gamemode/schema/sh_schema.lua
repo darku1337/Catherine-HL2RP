@@ -1,8 +1,10 @@
 Schema.Name = "HL2RP"
 Schema.Author = "L7D"
 Schema.FolderName = "cat_hl2rp"
-Schema.Title = "2016 year, City 18"
+Schema.Title = "Half - Life 2 Role Play"
 Schema.Desc = "This is safe."
+Schema.IntroTitle = "2016 year, City 18"
+Schema.IntroDesc = "This is safe."
 
 catherine.util.Include( "sh_config.lua" )
 catherine.util.Include( "sh_commands.lua" )
