@@ -1,5 +1,5 @@
 do
-	catherine.font.FontString = "Le_Bossu"
+	catherine.font.FontString = "Segoe UI"
 	catherine.font.Set( "catherine_menuTitle", catherine.font.FontString, 20, 1000 )
 	catherine.font.Set( "catherine_button20", catherine.font.FontString, 20, 1000 )
 	catherine.font.Set( "catherine_normal15", catherine.font.FontString, 15, 1000 )
